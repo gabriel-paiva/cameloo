@@ -1,9 +1,5 @@
-import { Container, TextInButton } from './styles';
+import { Text } from './styles';
 
-export const Button = (textContent, maxWidth, backgroundColor, textColor) => {
-  return (
-    <Container backgroundColor={backgroundColor} maxWidth={maxWidth}>
-      <TextInButton textColor={textColor}>{textContent}</TextInButton>
-    </Container>
-  );
+export const Button = () => {
+  return <Text>Teste</Text>;
 };
