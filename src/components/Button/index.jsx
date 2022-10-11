@@ -1,5 +1,10 @@
-import { Text } from './styles';
+import { Text } from 'react-native';
+import { Container } from './styles';
 
-export const Button = () => {
-  return <Text>Teste</Text>;
+export const Button = ({ textContent, onPress }) => {
+  return (
+    <Container onPress={onPress}>
+      <Text>{textContent}</Text>
+    </Container>
+  );
 };

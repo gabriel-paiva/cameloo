@@ -1,5 +1,8 @@
 import styled from 'styled-components/native';
 
-export const Text = styled.Text`
-  color: red;
+export const Container = styled.TouchableOpacity`
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px;
+  margin: 10px;
 `;
