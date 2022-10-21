@@ -1,5 +1,10 @@
-import { LogoContainer } from './styles';
+import { LogoContainer, Image } from './styles';
+import { Logo as LogoImage } from '../../assets/images';
 
-export const Logo = () => {
-  return <LogoContainer></LogoContainer>;
+export const Logo = ({ marginBottom = 0 }) => {
+  return (
+    <LogoContainer marginBottom={marginBottom}>
+      <Image source={LogoImage} />
+    </LogoContainer>
+  );
 };

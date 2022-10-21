@@ -1,5 +1,10 @@
-import { Home } from './src/screens';
+import { AppProvider } from './hooks';
+import { Routes } from './routes';
 
 export default function App() {
-  return <Home />;
+  return (
+    <AppProvider>
+      <Routes />
+    </AppProvider>
+  );
 }

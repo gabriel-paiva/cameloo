@@ -1,9 +1,8 @@
-import { Text } from 'react-native';
-import { Container } from './styles';
+import { Container, Text } from './styles';
 
-export const Button = ({ textContent, onPress }) => {
+export const Button = ({ textContent, onPress, isBordered = false }) => {
   return (
-    <Container onPress={onPress}>
+    <Container onPress={onPress} isBordered={isBordered}>
       <Text>{textContent}</Text>
     </Container>
   );
