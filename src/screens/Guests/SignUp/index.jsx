@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Button, Text, InputText } from '../../components';
+import { Button, Text, InputText } from '../../../components';
 
 export const SignUp = () => {
   return (

@@ -10,7 +10,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import * as auth from '../services/auth';
 
-import api from '../services/api';
+// Isso vai ser usado quando tivermos uma API REST
+// import api from '../services/api';
 
 const AuthContext = createContext({});
 
@@ -26,7 +27,9 @@ export const AuthProvider = ({ children }) => {
       ]);
 
       if (storagedUser[1] && storagedToken[1]) {
-        api.defaults.headers.Authorization = `Bearer ${storagedToken[1]}`;
+        // Isso vai ser usado quando tivermos uma API REST
+        // api.defaults.headers.Authorization = `Bearer ${storagedToken[1]}`;
+
         setUser(JSON.parse(storagedUser[1]));
       }
     }
@@ -37,7 +40,8 @@ export const AuthProvider = ({ children }) => {
   const signUp = useCallback(async (data) => {
     const response = await auth.signUp(data);
 
-    api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
+    // Isso vai ser usado quando tivermos uma API REST
+    // api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
 
     await AsyncStorage.multiSet([
       ['@Cameloo:token', response.data.token],
@@ -53,7 +57,8 @@ export const AuthProvider = ({ children }) => {
     setUser(response.user);
     setToken(response.data.token);
 
-    api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
+    // Isso vai ser usado quando tivermos uma API REST
+    // api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
 
     await AsyncStorage.multiSet([
       ['@Cameloo:token', response.data.token],

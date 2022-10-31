@@ -1,6 +1,6 @@
 import { Container } from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Logo, Text } from '../../components';
+import { Button, Logo, Text } from '../../../components';
 
 export const Home = () => {
   const navigation = useNavigation();

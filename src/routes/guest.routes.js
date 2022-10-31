@@ -6,7 +6,7 @@ import * as GuestPages from '../screens/Guests';
 
 const Stack = createStackNavigator();
 
-export const AuthRoutes = () => {
+export const GuestRoutes = () => {
   return (
     <Stack.Navigator
       initialRouteName="Home"

@@ -1,5 +1,5 @@
-import { AppProvider } from './hooks';
-import { Routes } from './routes';
+import { AppProvider } from './src/hooks';
+import { Routes } from './src/routes';
 
 export default function App() {
   return (
