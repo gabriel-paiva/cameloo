@@ -1,10 +1,10 @@
 import { Container } from './styles';
 import { Text } from '../../../components';
 
-export const Feed = () => {
+export const Product = () => {
   return (
     <Container>
-      <Text>FEED PAGE</Text>
+      <Text>PRODUCT PAGE</Text>
     </Container>
   );
 };

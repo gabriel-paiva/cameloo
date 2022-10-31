@@ -1,9 +1,10 @@
 import { Container } from './styles';
-import { Button, Text, InputText } from '../../../components';
+import { Button, Text, InputText, Header } from '../../../components';
 
 export const SignUp = () => {
   return (
     <Container>
+      <Header pageName="Cadastro" />
       <InputText placeholder="Nome" />
       <InputText placeholder="E-mail" />
       <InputText placeholder="Senha" />
