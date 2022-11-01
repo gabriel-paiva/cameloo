@@ -15,6 +15,7 @@ export const GuestRoutes = () => {
       }}
     >
       <Stack.Screen name="Home" component={GuestPages.Home} />
+      <Stack.Screen name="Login" component={GuestPages.Login} />
       <Stack.Screen name="SignUp" component={GuestPages.SignUp} />
     </Stack.Navigator>
   );

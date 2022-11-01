@@ -7,7 +7,12 @@ export const Home = () => {
   return (
     <Container>
       <Logo marginBottom={'70px'} />
-      <Button textContent="Entre" />
+      <Button
+        textContent="Entre"
+        onPress={() => {
+          navigation.navigate('Login');
+        }}
+      />
       <Text style={{ marginTop: '100px' }}>OU</Text>
       <Button
         textContent="Cadastre-se"
