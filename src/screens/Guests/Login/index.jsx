@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Button, Text, InputText, Header } from '../../../components';
+import { Button, InputText, Header } from '../../../components';
 import { useForm, Controller } from 'react-hook-form';
 import { useAuth } from '../../../hooks/auth.jsx';
 
