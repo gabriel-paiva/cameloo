@@ -5,13 +5,22 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import * as AuthenticatedPages from '../screens/Authenticated';
+import colors from '../utils/colors';
 
 const Stack = createStackNavigator();
 const BotomTabs = createBottomTabNavigator();
 
 export const TabBar = () => {
   return (
-    <BotomTabs.Navigator initialRouteName="Feed">
+    <BotomTabs.Navigator
+      initialRouteName="Feed"
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: colors.orange,
+        },
+        tabBarShowLabel: false,
+      }}
+    >
       <BotomTabs.Screen
         name="Feed"
         component={AuthenticatedPages.Feed}
