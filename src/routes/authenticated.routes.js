@@ -1,10 +1,52 @@
 import React from 'react';
 
+import { MaterialIcons } from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import * as AuthenticatedPages from '../screens/Authenticated';
 
 const Stack = createStackNavigator();
+const BotomTabs = createBottomTabNavigator();
+
+export const TabBar = () => {
+  return (
+    <BotomTabs.Navigator initialRouteName="Feed">
+      <BotomTabs.Screen
+        name="Feed"
+        component={AuthenticatedPages.Feed}
+        options={({ route }) => ({
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons name="home" size={30} color="#000" />
+          ),
+          headerShown: false,
+        })}
+      />
+
+      <BotomTabs.Screen
+        name="Cart"
+        component={AuthenticatedPages.Cart}
+        options={({ route }) => ({
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons name="shopping-cart" size={30} color="#000" />
+          ),
+          headerShown: false,
+        })}
+      />
+
+      <BotomTabs.Screen
+        name="Profile"
+        component={AuthenticatedPages.Profile}
+        options={({ route }) => ({
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons name="person" size={30} color="#000" />
+          ),
+          headerShown: false,
+        })}
+      />
+    </BotomTabs.Navigator>
+  );
+};
 
 export const AuthenticatedRoutes = () => {
   return (
@@ -14,7 +56,10 @@ export const AuthenticatedRoutes = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Feed" component={AuthenticatedPages.Feed} />
+      <Stack.Screen name="Feed" component={TabBar} />
+      <Stack.Screen name="Cart" component={TabBar} />
+      <Stack.Screen name="Profile" component={TabBar} />
+      <Stack.Screen name="Product" component={AuthenticatedPages.Product} />
     </Stack.Navigator>
   );
 };
