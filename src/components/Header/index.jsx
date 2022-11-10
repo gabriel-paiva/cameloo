@@ -16,16 +16,20 @@ export const Header = ({ pageName }) => {
           alignItems: 'center',
         }}
       >
-        <Icon.Button
-          name="chevron-left"
-          size={20}
-          color={colors.orange}
-          backgroundColor="transparent"
-          onPress={() => {
-            navigation.goBack();
-          }}
-        />
-        <Text>{pageName}</Text>
+        {pageName && (
+          <>
+            <Icon.Button
+              name="chevron-left"
+              size={20}
+              color={colors.orange}
+              backgroundColor="transparent"
+              onPress={() => {
+                navigation.goBack();
+              }}
+            />
+            <Text>{pageName}</Text>
+          </>
+        )}
       </View>
       <View
         style={{

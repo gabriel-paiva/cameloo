@@ -23,7 +23,7 @@ export const Profile = () => {
         textContent="Meus Pedidos"
         iconName="inbox"
         onPress={() => {
-          console.log('click');
+          navigation.navigate('MyRequests');
         }}
       />
       <ButtonUnderlined
