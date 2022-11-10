@@ -33,6 +33,7 @@ export const ButtonProduct = ({
       />
       <View style={{ height: 100, justifyContent: 'space-between' }}>
         {name && <Text>{name}</Text>}
+        {numberOfStars && <Text>Estrelas: {numberOfStars}</Text>}
         {price && <Text>{price}</Text>}
         {date && <Text>{date}</Text>}
         {inventory && <Text>Estoque: {inventory}</Text>}
