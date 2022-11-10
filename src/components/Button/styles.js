@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import colors from '../../utils/colors';
 
 export const Container = styled.TouchableOpacity`
-  width: 135px;
+  width: ${({ width }) => (width ? `${width}px` : '135px')};
   height: 40px;
   align-items: center;
   border-radius: 50px;

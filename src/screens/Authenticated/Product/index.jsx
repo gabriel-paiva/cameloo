@@ -39,6 +39,7 @@ export const Product = ({ route }) => {
         <Button
           textContent="Adicionar ao carrinho"
           isBordered
+          width={180}
           onPress={() => {
             add(product, 1);
             navigation.goBack();

@@ -1,4 +1,5 @@
 export { Feed } from './Feed/index.jsx';
+export { AllProducts } from './AllProducts/index.jsx';
 export { MyProducts } from './MyProducts/index.jsx';
 export { MyRequests } from './MyRequests/index.jsx';
 export { Product } from './Product/index.jsx';

@@ -77,6 +77,10 @@ export const AuthenticatedRoutes = () => {
         component={AuthenticatedPages.MyRequests}
       />
       <Stack.Screen name="Product" component={AuthenticatedPages.Product} />
+      <Stack.Screen
+        name="AllProducts"
+        component={AuthenticatedPages.AllProducts}
+      />
     </Stack.Navigator>
   );
 };
