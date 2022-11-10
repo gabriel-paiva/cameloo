@@ -20,13 +20,13 @@ export const Cart = () => {
         <>
           {items.map((product) => (
             <View
+              key={product.id}
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
               }}
             >
               <ButtonProduct
-                key={product.id}
                 imageUrl={product.imageUrl}
                 onPress={() => {
                   console.log('click');
