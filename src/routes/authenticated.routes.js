@@ -68,7 +68,7 @@ export const AuthenticatedRoutes = () => {
       <Stack.Screen name="Feed" component={TabBar} />
       <Stack.Screen name="Cart" component={TabBar} />
       <Stack.Screen name="Profile" component={TabBar} />
-      <Stack.Screen name="Product" component={AuthenticatedPages.Product} />
+      <Stack.Screen name="Products" component={AuthenticatedPages.Products} />
     </Stack.Navigator>
   );
 };

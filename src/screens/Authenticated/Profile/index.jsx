@@ -3,8 +3,10 @@ import { Text, Header, Button, ButtonUnderlined } from '../../../components';
 import { useAuth } from '../../../hooks/auth.jsx';
 import { Image } from 'react-native';
 import colors from '../../../utils/colors';
+import { useNavigation } from '@react-navigation/native';
 
 export const Profile = () => {
+  const navigation = useNavigation();
   const { user, logout } = useAuth();
   return (
     <Container>
@@ -28,7 +30,7 @@ export const Profile = () => {
         textContent="Meus Produtos"
         iconName="dropbox"
         onPress={() => {
-          console.log('click');
+          navigation.navigate('Products');
         }}
       />
       <ButtonUnderlined
