@@ -1,4 +1,5 @@
 export { Button } from './Button/index.jsx';
+export { ButtonImage } from './ButtonImage/index.jsx';
 export { ButtonCategory } from './ButtonCategory/index.jsx';
 export { ButtonUnderlined } from './ButtonUnderlined/index.jsx';
 export { ButtonProduct } from './ButtonProduct/index.jsx';

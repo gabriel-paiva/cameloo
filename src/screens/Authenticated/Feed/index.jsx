@@ -1,10 +1,18 @@
+import { useState } from 'react';
 import { Container, Text } from './styles';
-import { Header, Button, ButtonCategory } from '../../../components';
+import {
+  Header,
+  Button,
+  ButtonCategory,
+  ButtonImage,
+} from '../../../components';
 import { useNavigation } from '@react-navigation/native';
 import { View } from 'react-native';
+import { productsMock } from '../../../utils/productsMock';
 
 export const Feed = () => {
   const navigation = useNavigation();
+  const [products, setProducts] = useState([...productsMock].slice(2));
   return (
     <Container>
       <Header />
@@ -54,21 +62,27 @@ export const Feed = () => {
         />
       </View>
       <Text>Novidades da semana</Text>
-      <Button
-        textContent="Ver produtos"
-        isBordered
-        onPress={() => {
-          navigation.navigate('AllProducts');
-        }}
-      />
+      <View style={{ flexDirection: 'row', gap: 8 }}>
+        {products.map((product) => (
+          <ButtonImage
+            imageUrl={product.imageUrl}
+            onPress={() => {
+              navigation.navigate('Product', { id: product.id });
+            }}
+          />
+        ))}
+      </View>
       <Text>Baseado em suas buscas</Text>
-      <Button
-        textContent="Ver produtos"
-        isBordered
-        onPress={() => {
-          navigation.navigate('AllProducts');
-        }}
-      />
+      <View style={{ flexDirection: 'row', gap: 8 }}>
+        {products.map((product) => (
+          <ButtonImage
+            imageUrl={product.imageUrl}
+            onPress={() => {
+              navigation.navigate('Product', { id: product.id });
+            }}
+          />
+        ))}
+      </View>
     </Container>
   );
 };
