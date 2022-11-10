@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useCallback,
-  useState,
-  useContext,
-  useEffect,
-} from 'react';
+import React, { createContext, useCallback, useState, useContext } from 'react';
 
 const CartContext = createContext({});
 
@@ -26,6 +20,26 @@ export const CartProvider = ({ children }) => {
     [items]
   );
 
+  const remove = useCallback(
+    (itemId) => {
+      const itemPosition = items.findIndex((item) => item.id == itemId);
+
+      if (itemPosition >= 0) {
+        const itemsCopy = [...items];
+        if (itemsCopy[itemPosition].quantity > 1) {
+          itemsCopy[itemPosition].quantity -= 1;
+        } else {
+          itemsCopy.splice(itemPosition, 1);
+        }
+
+        setItems(itemsCopy);
+      } else {
+        console.log('Item não encontrado.');
+      }
+    },
+    [items]
+  );
+
   const calculateTotal = useCallback(() => {
     let sum = 0;
     items.forEach((product) => {
@@ -39,6 +53,7 @@ export const CartProvider = ({ children }) => {
       value={{
         items,
         add,
+        remove,
         calculateTotal,
       }}
     >

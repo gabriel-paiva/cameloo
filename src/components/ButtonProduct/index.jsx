@@ -2,6 +2,7 @@ import colors from '../../utils/colors';
 import { Container, Text } from './styles';
 import { View, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { formatCurrency } from '../../utils/formatCurrency';
 
 export const ButtonProduct = ({
   imageUrl,
@@ -11,6 +12,9 @@ export const ButtonProduct = ({
   price,
   date,
   inventory,
+  seller,
+  quantity,
+  showIcon = true,
 }) => {
   return (
     <Container
@@ -34,17 +38,23 @@ export const ButtonProduct = ({
       <View style={{ height: 100, justifyContent: 'space-between' }}>
         {name && <Text>{name}</Text>}
         {numberOfStars && <Text>Estrelas: {numberOfStars}</Text>}
-        {price && <Text>{price}</Text>}
+        {price && <Text>{formatCurrency(price)}</Text>}
+        {seller && <Text>Vendido por: {seller}</Text>}
+        {quantity && (
+          <Text style={{ fontWeight: 600 }}>Quantidade: {quantity}</Text>
+        )}
         {date && <Text>{date}</Text>}
         {inventory && <Text>Estoque: {inventory}</Text>}
       </View>
-      <Icon
-        name="chevron-right"
-        size={16}
-        color={colors.orange}
-        backgroundColor="transparent"
-        style={{ marginLeft: 'auto' }}
-      />
+      {showIcon && (
+        <Icon
+          name="chevron-right"
+          size={16}
+          color={colors.orange}
+          backgroundColor="transparent"
+          style={{ marginLeft: 'auto' }}
+        />
+      )}
     </Container>
   );
 };
