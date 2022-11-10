@@ -30,7 +30,7 @@ export const Profile = () => {
         textContent="Meus Produtos"
         iconName="dropbox"
         onPress={() => {
-          navigation.navigate('Products');
+          navigation.navigate('MyProducts');
         }}
       />
       <ButtonUnderlined
