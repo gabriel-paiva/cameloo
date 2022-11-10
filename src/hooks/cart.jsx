@@ -11,15 +11,15 @@ const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
 
-  const add = useCallback((itemId, quantity) => {
-    const itemPosition = items.findIndex((item) => item.id == itemId);
+  const add = useCallback((product, quantity) => {
+    const itemPosition = items.findIndex((item) => item.id == product.id);
 
-    if (itemPosition) {
+    if (itemPosition >= 0) {
       const itemsCopy = [...items];
       itemsCopy[itemPosition].quantity += quantity;
       setItems(itemsCopy);
     } else {
-      setItems([...items, { id: itemId, quantity: quantity }]);
+      setItems([...items, { ...product, quantity: quantity }]);
     }
   }, []);
 

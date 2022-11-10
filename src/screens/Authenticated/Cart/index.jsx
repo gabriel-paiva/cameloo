@@ -4,10 +4,14 @@ import { useCart } from '../../../hooks/cart.jsx';
 
 export const Cart = () => {
   const { items } = useCart();
+  const isCardEmpty = items.length < 1;
   return (
     <Container>
       <Header pageName="Carrinho" />
-      <Text>CART PAGE</Text>
+      {isCardEmpty && (
+        <Text>Seu carrinho está vazio, faça algumas compras!</Text>
+      )}
+
       <Text>{items.length} itens</Text>
     </Container>
   );
