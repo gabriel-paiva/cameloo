@@ -1,14 +1,10 @@
 import { useState } from 'react';
+import { View, TouchableOpacity } from 'react-native';
 import { Container, Text } from './styles';
-import {
-  Header,
-  Button,
-  ButtonCategory,
-  ButtonImage,
-} from '../../../components';
+import { Header, ButtonCategory, ButtonImage } from '../../../components';
 import { useNavigation } from '@react-navigation/native';
-import { View } from 'react-native';
 import { productsMock } from '../../../utils/productsMock';
+import colors from '../../../utils/colors';
 
 export const Feed = () => {
   const navigation = useNavigation();
@@ -61,7 +57,23 @@ export const Feed = () => {
           }}
         />
       </View>
-      <Text>Novidades da semana</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          width: '100%',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <Text>Novidades da semana</Text>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllProducts');
+          }}
+        >
+          <Text style={{ color: colors.orange, fontSize: 14 }}>Ver mais</Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ flexDirection: 'row', gap: 8 }}>
         {products.map((product) => (
           <ButtonImage
@@ -72,7 +84,23 @@ export const Feed = () => {
           />
         ))}
       </View>
-      <Text>Baseado em suas buscas</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          width: '100%',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <Text>Baseado em suas buscas</Text>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllProducts');
+          }}
+        >
+          <Text style={{ color: colors.orange, fontSize: 14 }}>Ver mais</Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ flexDirection: 'row', gap: 8 }}>
         {products.map((product) => (
           <ButtonImage
