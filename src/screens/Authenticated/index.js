@@ -3,5 +3,8 @@ export { AllProducts } from './AllProducts/index.jsx';
 export { MyProducts } from './MyProducts/index.jsx';
 export { MyRequests } from './MyRequests/index.jsx';
 export { Product } from './Product/index.jsx';
+export { ProductCreate } from './ProductCreate/index.jsx';
 export { Cart } from './Cart/index.jsx';
 export { Profile } from './Profile/index.jsx';
+export { BuyFinish } from './BuyFinish/index.jsx';
+export { BuyPayment } from './BuyPayment/index.jsx';

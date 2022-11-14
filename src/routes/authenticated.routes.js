@@ -81,6 +81,15 @@ export const AuthenticatedRoutes = () => {
         name="AllProducts"
         component={AuthenticatedPages.AllProducts}
       />
+      <Stack.Screen
+        name="ProductCreate"
+        component={AuthenticatedPages.ProductCreate}
+      />
+      <Stack.Screen
+        name="BuyPayment"
+        component={AuthenticatedPages.BuyPayment}
+      />
+      <Stack.Screen name="BuyFinish" component={AuthenticatedPages.BuyFinish} />
     </Stack.Navigator>
   );
 };

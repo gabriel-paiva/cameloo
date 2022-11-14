@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Container } from './styles';
-import { ButtonProduct, Header } from '../../../components';
+import { ButtonProduct, Header, Button } from '../../../components';
 import { productsMock } from '../../../utils/productsMock';
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,6 +10,14 @@ export const MyProducts = () => {
   return (
     <Container>
       <Header pageName="Meus Produtos" />
+      <Button
+        textContent="Adicionar Produto"
+        isBordered
+        width={180}
+        onPress={() => {
+          navigation.navigate('ProductCreate');
+        }}
+      />
       {productsList.map((product) => (
         <ButtonProduct
           key={product.id}

@@ -77,9 +77,10 @@ export const Feed = () => {
       <View style={{ flexDirection: 'row', gap: 8 }}>
         {products.map((product) => (
           <ButtonImage
+            key={product.id}
             imageUrl={product.imageUrl}
             onPress={() => {
-              navigation.navigate('Product', { id: product.id });
+              navigation.navigate('Product', { id: product.id, canBuy: true });
             }}
           />
         ))}
@@ -104,9 +105,10 @@ export const Feed = () => {
       <View style={{ flexDirection: 'row', gap: 8 }}>
         {products.map((product) => (
           <ButtonImage
+            key={product.id}
             imageUrl={product.imageUrl}
             onPress={() => {
-              navigation.navigate('Product', { id: product.id });
+              navigation.navigate('Product', { id: product.id, canBuy: true });
             }}
           />
         ))}
