@@ -90,6 +90,10 @@ export const AuthenticatedRoutes = () => {
         component={AuthenticatedPages.BuyPayment}
       />
       <Stack.Screen name="BuyFinish" component={AuthenticatedPages.BuyFinish} />
+      <Stack.Screen
+        name="ProfileEdit"
+        component={AuthenticatedPages.ProfileEdit}
+      />
     </Stack.Navigator>
   );
 };

@@ -6,5 +6,6 @@ export { Product } from './Product/index.jsx';
 export { ProductCreate } from './ProductCreate/index.jsx';
 export { Cart } from './Cart/index.jsx';
 export { Profile } from './Profile/index.jsx';
+export { ProfileEdit } from './ProfileEdit/index.jsx';
 export { BuyFinish } from './BuyFinish/index.jsx';
 export { BuyPayment } from './BuyPayment/index.jsx';

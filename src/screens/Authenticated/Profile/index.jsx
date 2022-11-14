@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Text, Header, Button, ButtonUnderlined } from '../../../components';
+import { Header, Button, ButtonUnderlined } from '../../../components';
 import { useAuth } from '../../../hooks/auth.jsx';
 import { Image } from 'react-native';
 import colors from '../../../utils/colors';
@@ -34,10 +34,10 @@ export const Profile = () => {
         }}
       />
       <ButtonUnderlined
-        textContent="Formas de Pagamento"
-        iconName="money"
+        textContent="Editar perfil"
+        iconName="user"
         onPress={() => {
-          console.log('click');
+          navigation.navigate('ProfileEdit');
         }}
       />
       <Button
