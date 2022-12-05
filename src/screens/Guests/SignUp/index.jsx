@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Button, InputText, Header } from '../../../components';
+import { Button, InputText, LogoBackground } from '../../../components';
 import { useNavigation } from '@react-navigation/native';
 import { useForm, Controller } from 'react-hook-form';
 
@@ -18,7 +18,7 @@ export const SignUp = () => {
   };
   return (
     <Container>
-      <Header pageName="Cadastro" />
+      <LogoBackground />
 
       <Controller
         control={control}

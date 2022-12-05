@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Button, InputText, Header } from '../../../components';
+import { Button, InputText, LogoBackground } from '../../../components';
 import { useForm, Controller } from 'react-hook-form';
 import { useAuth } from '../../../hooks/auth.jsx';
 
@@ -19,7 +19,7 @@ export const Login = () => {
 
   return (
     <Container>
-      <Header pageName="Login" />
+      <LogoBackground />
       <Controller
         control={control}
         name="email"
